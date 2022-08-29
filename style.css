@@ -1,33 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: #000;
     font-family: 'Montserrat';
+    overflow-x: hidden;
 }
+
+.active {
+    background: red !important;
+}
+
 /* -------NAVBAR------ */
 
 .logo {
     margin-top: 20px;
     margin-left: 40px;
 }
+
 nav {
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.menu-bar {
+    display: none;
+}
+
 ul {
     display: flex;
     margin-top: 30px;
     float: right;
 }
+
 li {
     padding: 0 40px 0 0;
     list-style-type: none;
 }
+
+@media screen and (max-width: 950px){
+
+    ul {
+        display: none;
+    }
+
+    .menu-bar {
+        position: absolute;
+        top: 1.1rem;
+        right: 1.8rem;
+        font-size: 2rem;
+        display: block;
+    }
+
+}
+
 
 /* --------HOME PAGE----- */
 
@@ -43,9 +75,11 @@ li {
     flex-direction: column;
     margin: auto;
 }
+
 .introduction p{
     padding-right: 120px;
 }
+
 .introduction h1 {
     font-size: 50px;
 }
@@ -53,13 +87,49 @@ li {
 .btn-home {
     margin-top: 15px;
 }
+
 button {
     color: white;
     background-color: #e22525;
     padding: 8px 15px;
 }
+
 .hello {
     color: red;
+}
+
+@media screen and (max-width: 950px){
+    
+    .home-page {
+        width: 100%;
+        height: 900px !important;
+        grid-template-columns: 1fr;
+    }
+
+    .introduction {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introduction p{
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .introduction h1 {
+        margin-left: -60px;
+        text-align: center;
+    }
+
+    .btn-home {
+        margin-left: -60px;
+    }
+
+    .hero-img {
+        margin-left: -30px;
+    }
+
 }
 
 /* ---------Container------- */
@@ -97,6 +167,17 @@ button {
     background-color: rgb(232, 34, 34);
 }
 
+@media screen and (max-width: 950px) {
+    
+    .container-3 {
+        margin-top: 100px;
+        height: 1000px;
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+        margin-left: 0px;
+        place-items: center;
+    }
+}
 
 /* -------***------- */
 
@@ -131,6 +212,12 @@ button {
     font-weight: 1000;
 }
 
+@media screen and (max-width: 950px){
+    .history {
+        width: 500px;
+    }
+}
+
 /* -------------------------------------- */
 
 .featured-projects{
@@ -140,6 +227,7 @@ button {
     padding: 0 200px;
     align-items: center;
 }
+
 .four {
     display: grid;
     grid-template-columns: 400px 400px;
@@ -147,12 +235,15 @@ button {
     margin-left: 300px;
     margin-top: 50px;
 }
+
 .four div {
     background-color: rgb(57, 44, 44);
 }
+
 .four div h4 {
     color: white;
 }
+
 .four div p {
     color: red;
     font-weight: 1000;
@@ -166,12 +257,39 @@ button {
     grid-template-columns: 2fr 1fr;
     margin-left: 300px;
 }
+
 .btn-2{
     float: right;
     margin: auto;
     margin-top: 50px;
 }
 
+@media screen and (max-width: 950px){
+    
+    .featured-projects{
+        flex-direction: column;
+        padding: 0 50px;
+        align-items: center;
+    }
+
+    .four {
+        grid-template-columns: 400px;
+        place-content: center;
+        margin-left: 0px;
+    }
+
+    .contact-flex {
+        width: 100%;
+        grid-template-columns: 1fr;
+        margin-left: 0px;
+        place-items: center;
+        padding: 0 30px;
+    }
+
+    .btn-2{
+        float: none;
+    }
+}
 
 /* ---------------- */
 
@@ -183,9 +301,11 @@ button {
     display: flex;
     justify-content: space-between;
 }
+
 .nav-two p {
     list-style-type: none;
 }
+
 .fa-youtube, .fa-facebook-f, .fa-twitter {
     color: white;
 }
@@ -207,6 +327,30 @@ footer {
 }
 
 .footer-icons div {
-    padding: 0 20px;
-    
+    padding: 0 20px;   
+}
+
+@media only screen and (max-width: 950px){
+
+    .nav-two {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-two p {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .footer-icons {
+        margin-right: 0px;
+    }
+
+    .logo2 {
+        margin-left: 1rem;
+    }
 }
